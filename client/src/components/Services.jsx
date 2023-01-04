@@ -37,7 +37,7 @@ const Services = () => {
           subtitle='Securiy is guranteed. We always maintain privacy and mainting the quality of our products.'
           icon={
             <BsShieldFillCheck
-              fontSite={21}
+              fontSize={21}
               className='text-white'
             />
           }
@@ -49,7 +49,7 @@ const Services = () => {
           subtitle='Securiy is guranteed. We always maintain privacy and mainting the quality of our products.'
           icon={
             <BiSearchAlt
-              fontSite={21}
+              fontSize={21}
               className='text-white'
             />
           }
@@ -61,7 +61,7 @@ const Services = () => {
           subtitle='Securiy is guranteed. We always maintain privacy and mainting the quality of our products.'
           icon={
             <RiHeart2Fill
-              fontSite={21}
+              fontSize={21}
               className='text-white'
             />
           }

@@ -7,6 +7,8 @@ import { Loader } from './';
 
 import { TransactionContext } from '../context/TranscactionContext';
 
+import { shortenAddress } from '../utils/shortenAddress';
+
 const commonStyles =
   'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white';
 
@@ -50,7 +52,7 @@ const Welcome = () => {
             Explore the crypto world. Buy and sell cryptocurrencies easily on
             Krypto Krypto
           </p>
-          {!connectWallet && (
+          {!connectedAccount && (
             <button
               type='button'
               onClick={connectWallet}
@@ -85,7 +87,9 @@ const Welcome = () => {
                 />
               </div>
               <div>
-                <p className='text-white font-light text-sm'>Address</p>
+                <p className='text-white font-light text-sm'>
+                  {shortenAddress(connectedAccount)}
+                </p>
                 <p className='text-white font-semibold text-lg mt-1'>Ethreum</p>
               </div>
             </div>

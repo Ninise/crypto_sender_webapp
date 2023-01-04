@@ -50,6 +50,7 @@ export const TransactionProvider = ({ children }) => {
 
         // todo getAllTransactions();
       } else {
+        setConnectedAccount('');
         console.log('No accounts found');
       }
     } catch (error) {
