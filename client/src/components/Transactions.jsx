@@ -54,7 +54,7 @@ const TransactionCard = ({
         </div>
 
         <img
-          src={gifUrl || url}
+          src={gifUrl || fetch('hello')}
           alt='gif'
           className='w-full h-64 2x:h96 rounded-md shadow-lg object-cover'
         />
@@ -68,7 +68,7 @@ const TransactionCard = ({
 };
 
 const Transactions = () => {
-  const { connectedAccount } = useContext(TransactionContext);
+  const { connectedAccount, transactions } = useContext(TransactionContext);
   return (
     <div className='flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions'>
       <div className='flex flex-col md:pp-12 py-12 px-4'>
@@ -83,7 +83,7 @@ const Transactions = () => {
         )}
 
         <div className='flex flex-wrap justify-center item-center'>
-          {dummyData.reverse().map((transaction, index) => (
+          {transactions.reverse().map((transaction, index) => (
             <TransactionCard
               key={index}
               {...transaction}
